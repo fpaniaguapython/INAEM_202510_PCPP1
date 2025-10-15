@@ -23,3 +23,12 @@ diccionario = {'Huesca':150_000, 'Teruel':80_000, 'Zaragoza':987_763}
 print(diccionario.get('Huesca'))
 print(diccionario.get('Castellón', '¿De qué vas?'))
 
+for clave in diccionario.keys():
+    print(clave)
+
+for valor in diccionario.values():
+    print(valor)    
+
+for clave, valor in diccionario.items():
+    print(clave, valor)
+
