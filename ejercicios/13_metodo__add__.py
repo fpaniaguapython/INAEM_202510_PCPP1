@@ -15,5 +15,5 @@ class Pelicula:
 el_resplandor = Pelicula('El Replandor', 'Kubrick', 10_000_000)
 et = Pelicula('E.T. El extraterrestre', 'Spielberg', 25_000_000)
 rambo = Pelicula('Rambo', 'Stallone', 8_000_000)
-print(el_resplandor + et + rambo + 8)
+print(el_resplandor + et + rambo)
 
