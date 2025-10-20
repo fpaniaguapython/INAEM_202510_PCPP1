@@ -19,5 +19,5 @@ def saludar(nombre):
 def calcular(numero_1, numero_2):
     print(numero_1+numero_2)
 
-saludar('Felipe')
-calcular(8,3)
+#saludar('Felipe')
+calcular(10,4)
