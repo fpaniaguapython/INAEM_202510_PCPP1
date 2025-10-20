@@ -8,7 +8,7 @@ def escribir_log(nombre_funcion, timestamp):
 def registrar_log(funcion_a_decorar):
     def inner_function(*args, **kwargs):
         escribir_log(funcion_a_decorar.__name__, str(datetime.now()))
-        funcion_a_decorar(*args, **kwargs)
+        return funcion_a_decorar(*args, **kwargs)
     return inner_function
 
 @registrar_log

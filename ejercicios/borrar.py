@@ -1,7 +1,12 @@
-def mostrar(*args):
-    print(type(args))
-    print(args)
-    print(*args)
+def decorador(funcion):
+    def inner(*args, **kwargs):
+        print('Decorando...')
+        return funcion(*args, **kwargs)
+    return inner
 
+@decorador
+def sumar(a,b):
+    return a+b
 
-mostrar(3,4,5,8)
+resultado = sumar(2,1)
+print(resultado)

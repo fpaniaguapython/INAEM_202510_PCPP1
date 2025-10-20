@@ -9,7 +9,7 @@ def registrar_log(nombre_fichero):
     def outer_function(funcion_a_decorar):
         def inner_function(*args, **kwargs):
             escribir_log(nombre_fichero, funcion_a_decorar.__name__, str(datetime.now()))
-            funcion_a_decorar(*args, **kwargs)
+            return funcion_a_decorar(*args, **kwargs)
         return inner_function
     return outer_function
 
