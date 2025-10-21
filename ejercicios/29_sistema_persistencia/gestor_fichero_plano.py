@@ -1,5 +1,6 @@
 from gestor import GestorPersistenciaBase
 from movie import Movie
+import os
 
 class GestorFicheroPlano(GestorPersistenciaBase):
     @staticmethod
@@ -25,13 +26,8 @@ class GestorFicheroPlano(GestorPersistenciaBase):
         return pelicula
 
     def delete(self, title : str):
-        raise NotImplementedError()
+        nombre_fichero = GestorFicheroPlano.get_nombre_fichero(title)
+        os.remove(nombre_fichero)
 
     def update(self, updated_movie : Movie):
-        raise NotImplementedError()
-    
-if __name__=='__main__':
-    #movie = Movie('El señor de los anillos', 'Peter Jackson', 280)
-    #GestorFicheroPlano().create(movie)
-    movie = GestorFicheroPlano().find_by_title('El señor de los anillos')
-    print(movie)
+        self.create(updated_movie)
