@@ -3,7 +3,7 @@ import json
 from gestor import GestorPersistenciaBase
 from movie import Movie
 
-class GestorFicheroPlano(GestorPersistenciaBase):
+class GestorJSON(GestorPersistenciaBase):
     def create(self, movie : Movie):
         nombre_fichero = movie.titulo.lower().replace(' ','_')+'.json'
         with open(nombre_fichero, mode='w', encoding='utf-8') as fichero:
@@ -20,4 +20,4 @@ class GestorFicheroPlano(GestorPersistenciaBase):
     
 if __name__=='__main__':
     movie = Movie('El señor de los anillos', 'Peter Jackson', 280)
-    GestorFicheroPlano().create(movie)
+    GestorJSON().create(movie)
