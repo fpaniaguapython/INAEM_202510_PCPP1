@@ -5,4 +5,4 @@ class TipoPersistencia(enum.Enum):
     JSON = 2
 
 def get_tipo_persistencia():
-    return TipoPersistencia.FICHERO_PLANO
+    return TipoPersistencia.JSON
