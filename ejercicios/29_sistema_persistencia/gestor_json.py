@@ -7,7 +7,7 @@ class GestorJSON(GestorPersistenciaBase):
     def create(self, movie : Movie):
         nombre_fichero = movie.titulo.lower().replace(' ','_')+'.json'
         with open(nombre_fichero, mode='w', encoding='utf-8') as fichero:
-            json.dump(movie.__dict__, fichero)
+            json.dump(movie.__dict__, fichero, ensure_ascii=False)
 
     def find_by_title(self, title : str):
         raise NotImplementedError()
