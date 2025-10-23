@@ -1,6 +1,7 @@
 import gestor_configuracion
 import gestor_fichero_plano
 import gestor_json
+import gestor_pickle
 
 def get_sistema_persistencia():
     tipo_persistencia = gestor_configuracion.get_tipo_persistencia()
@@ -8,3 +9,6 @@ def get_sistema_persistencia():
         return gestor_fichero_plano.GestorFicheroPlano()
     elif (tipo_persistencia==gestor_configuracion.TipoPersistencia.JSON):
         return gestor_json.GestorJSON()
+    elif (tipo_persistencia==gestor_configuracion.TipoPersistencia.PICKLE):
+        return gestor_pickle.GestorPickle()
+    
