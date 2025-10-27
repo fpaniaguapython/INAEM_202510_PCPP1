@@ -57,9 +57,11 @@ button_leer.grid(row=3, column=1)
 def entrando(event):
     print('Entrando')
 
+def saliendo(event):
+    print('Saliendo')
 
-#label_1.bind("<Enter>", entrando)
-#
-#<Leave>
+label_titulo.bind("<Enter>", entrando)
+label_titulo.bind("<Leave>", saliendo)
+
 
 window.mainloop()
