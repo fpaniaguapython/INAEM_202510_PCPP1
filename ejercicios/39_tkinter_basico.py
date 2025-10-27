@@ -26,13 +26,16 @@ if __name__=='__main__':
     # Definición de un campo de entrada
     entry_sumando_1 = ttk.Entry(window)
     entry_sumando_1.place(x=10, y=10, width=50, height=30)
+    #entry_sumando_1.pack()
 
     entry_sumando_2 = ttk.Entry(window)
     entry_sumando_2.place(x=70, y=10, width=50, height=30)
+    #entry_sumando_2.pack()
 
     # Definición de un botón
     boton_aceptar = ttk.Button(window, text='Pulsar', command=sumar) # No implica presentación
     boton_aceptar.place(x=140, y=10, width=70, height=30)
+    #boton_aceptar.pack()
 
     window.mainloop()
     
