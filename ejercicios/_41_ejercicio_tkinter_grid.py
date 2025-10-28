@@ -55,10 +55,12 @@ button_guardar.grid(row=3, column=0)
 button_leer.grid(row=3, column=1)
 
 def entrando(event):
-    print('Entrando')
+    print('Entrando:', event.widget)
+    print(event.__dict__)
 
 def saliendo(event):
-    print('Saliendo')
+    print('Saliendo', event.widget)
+    print(event.__dict__)
 
 label_titulo.bind("<Enter>", entrando)
 label_titulo.bind("<Leave>", saliendo)
