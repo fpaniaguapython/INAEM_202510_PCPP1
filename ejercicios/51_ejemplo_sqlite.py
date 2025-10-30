@@ -57,15 +57,15 @@ if __name__=='__main__':
         con = get_connection('peliculas.db')
         create_database(con)
 
-        #peli = Movie(None, 'Película 2', 'Director 2', 1991)
-        #create(con, peli)
+        peli = Movie(None, 'Película 2', 'Director 2', 1991)
+        create(con, peli)
 
-        peli = read(con, 8)
+        peli = read(con, 2)
         print(type(peli))
         print(peli)
 
-        #peli = Movie(1, 'It Capítulo 2', 'Wes Craven', 2005)
-        #update(con, peli)
+        peli = Movie(1, 'It Capítulo 3', 'Wes Craven', 2005)
+        update(con, peli)
 
         
 
